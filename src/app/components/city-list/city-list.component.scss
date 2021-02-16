@@ -1,0 +1,29 @@
+.card-container {
+    display: inline-flex;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card {
+    margin: 1em;
+}
+
+.coor-custom{
+    margin: auto;
+}
+
+/*
+
+
+.bodyCostum{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+*/
+

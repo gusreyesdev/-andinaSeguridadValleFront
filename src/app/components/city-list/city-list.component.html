@@ -1,0 +1,22 @@
+<ngx-spinner type="square-loader"></ngx-spinner>
+
+<div class="card-container" *ngFor="let city of cities">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title class="text-center"> {{city.permit_type}} </mat-card-title>
+            <mat-card-subtitle class="text-center" *ngIf="city.location "> <p class="text-center coor-custom">Coordenadas</p> {{city.location.coordinates}} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="bodyCostum">
+                {{city.work_description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="row">
+                <div class="col">
+                    <button class="btn-block" mat-stroked-button (click)="onGoToMap($event, city)">Mapa</button>
+                </div>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>
